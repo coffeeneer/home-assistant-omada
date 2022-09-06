@@ -71,16 +71,7 @@ mkdir "${OMADA_DIR}" -vp
 # starting with 5.0.x, the installation has no webapps directory; these values are pulled from the install.sh
 case "${OMADA_MAJOR_VER}" in
   5)
-    # check which 5.x we are running
-    case "${OMADA_VER}" in
-      5.3.1)
-        # 5.3.1 move the keystore directory to be a subdir of data
-        NAMES=( bin properties lib install.sh uninstall.sh )
-        ;;
-      *)
-        NAMES=( bin properties keystore lib install.sh uninstall.sh )
-        ;;
-    esac
+    NAMES=( bin properties lib install.sh uninstall.sh )
     ;;
   *)
     NAMES=( bin properties keystore lib webapps install.sh uninstall.sh )
